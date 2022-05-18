@@ -1,5 +1,6 @@
 from flask import Flask
 import json
+from common.utilities import *
 
 app = Flask(__name__)
 
@@ -17,7 +18,9 @@ def home():
     exception = "First";
     try:
         data = json.loads(request.data)
+        exception = "Got data 00"
         model = data["model"]
+        exception = "Got data 01"
         document = data["doc"]
         exception = "Got data"
         trainer = Trainer()
