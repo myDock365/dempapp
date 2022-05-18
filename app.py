@@ -13,7 +13,7 @@ def hello():
 # returns the data that we send when we use POST.
 @app.route('/extract', methods=['POST'])
 def home():
-    exception = "";
+    exception = "First";
     try:
         data = json.loads(request.data)
         model = data["model"]
